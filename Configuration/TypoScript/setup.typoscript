@@ -1,0 +1,41 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+page {
+    10 {
+        templateName.stdWrap.cObject {
+            pagets__paradeis2017_example = TEXT
+            pagets__paradeis2017_example.value = Example
+        }
+    }
+
+    includeCSSLibs {
+        googlewebfont >
+    }
+
+    includeCSS {
+        theme = EXT:paradeis2017/Resources/Public/Less/theme.less
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        paradeis2017_scripts = EXT:paradeis2017/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
