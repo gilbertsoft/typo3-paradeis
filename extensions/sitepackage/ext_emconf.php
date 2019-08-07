@@ -1,10 +1,9 @@
 <?php
 
-
-/*
- * This file is part of the "Paradeis2017" Extension for TYPO3 CMS.
+/**
+ * This file is part of the "sitepackage" extension for TYPO3 CMS.
  *
- * Copyright (C) 2017 by Gilbertsoft (gilbertsoft.org)
+ * Copyright (C) 2017-2019 by Gilbertsoft (gilbertsoft.com)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,24 +19,26 @@
  * was distributed with this source code.
  *
  * The TYPO3 project - inspiring people to share!
+ *
+ * Extension Manager/Repository config file for ext "sitepackage".
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Paradeis2017',
-    'description' => 'Template 2017 für Paradeis',
+    'title' => 'Sitepackage for paradeis.ch',
+    'description' => 'TYPO3 sitepackage for paradeis.ch',
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-8.7.99',
-            'rte_ckeditor' => '8.7.0-8.7.99',
-            'bootstrap_package' => '9.0.0-9.0.99'
+            'typo3' => '8.7.0-9.5.99',
+            'rte_ckeditor' => '8.7.0-9.5.99',
+            'bootstrap_package' => '10.0.0-10.0.99'
         ],
         'conflicts' => [
         ],
     ],
     'autoload' => [
         'psr-4' => [
-            'Gilbertsoft\\Paradeis2017\\' => 'Classes'
+            'Gilbertsoft\\Sitepackage\\' => 'Classes'
         ],
     ],
     'state' => 'alpha',

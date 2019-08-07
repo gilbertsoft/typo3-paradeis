@@ -1,14 +1,21 @@
 {
-    "name": "gilbertsoft/paradeis2017",
+    "name": "gilbertsoft/sitepackage",
     "type": "typo3-cms-extension",
-    "description": "Template 2017 für Paradeis",
+    "description": "TYPO3 sitepackage for paradeis.ch",
     "homepage": "https://gilbertsoft.com",
-    "license": ["GPL-2.0+"],
+    "license": ["GPL-3.0-or-later"],
     "keywords": ["TYPO3 CMS"],
-    "version": "1.0.0",
+    "version": "0.0.1",
     "require": {
-        "typo3/cms-core": "^8.7",
-        "typo3/cms-rte-ckeditor": "^8.7",
-        "bk2k/bootstrap-package": "^8.0"
+        "typo3/cms-core": "^8.7 || ^9.5",
+        "typo3/cms-rte-ckeditor": "^8.7 || ^9.5",
+        "typo3/cms-lowlevel": "*",
+        "typo3/cms-tstemplate": "*",
+        "bk2k/bootstrap-package": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gilbertsoft\\Sitepackage\\": "Classes/"
+        }
     }
 }

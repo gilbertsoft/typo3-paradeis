@@ -6,14 +6,14 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'paradeis2017';
+    $extensionKey = 'sitepackage';
 
     /**
-     * Default PageTS for Paradeis2017
+     * Default PageTS for Sitepackage
      */
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
-        'Configuration/PageTS/All.txt',
-        'Paradeis2017'
+        'Configuration/TsConfig/Page/All.tsconfig',
+        'Sitepackage'
     );
 });

@@ -1,4 +1,0 @@
-#
-# BACKENDLAYOUTS
-#
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:paradeis2017/Configuration/PageTS/Mod/WebLayout/BackendLayouts" extensions="txt">

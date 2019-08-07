@@ -1,4 +1,4 @@
-Base Sitepackage for the project Paradeis2017
+Sitepackage for the project paradeis.ch
 ==============================================================
 
 Add some explanation here.

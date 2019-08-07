@@ -1,26 +1,15 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gsfavicon/Configuration/TypoScript/setup.typoscript">
 
 
 ##############
 #### PAGE ####
 ##############
 page {
-    10 {
-        templateName.stdWrap.cObject {
-            pagets__paradeis2017_example = TEXT
-            pagets__paradeis2017_example.value = Example
-        }
-    }
-
-    includeCSSLibs {
-        googlewebfont >
-    }
-
     includeCSS {
-        theme = EXT:paradeis2017/Resources/Public/Less/theme.less
+        theme = EXT:sitepackage/Resources/Public/Scss/Theme/theme.scss
     }
 
     includeJSLibs {
@@ -36,6 +25,25 @@ page {
     }
 
     includeJSFooter {
-        paradeis2017_scripts = EXT:paradeis2017/Resources/Public/JavaScript/Dist/scripts.js
+        sitepackage_scripts = EXT:sitepackage/Resources/Public/JavaScript/Dist/scripts.js
     }
 }
+
+
+##############
+### CONFIG ###
+##############
+#config.debug = 1
+#config.spamProtectEmailAddresses = ascii
+config.spamProtectEmailAddresses = -1
+config.spamProtectEmailAddresses_atSubst = (at)
+config.spamProtectEmailAddresses_lastDotSubst = (dot)
+
+#page.meta.google-site-verification = HE25NWeHjXfANYQV5qoHPCAoy4EUOXfEK9diZQf4HSU
+#page.meta >
+#page.jsFooterInline.1512513045 = test
+#page.jsFooterInline.1512513045 = TEXT
+config.language = de
+config.locale_all = de_CH.UTF-8
+config.htmlTag_setParams = lang="de" dir="ltr" class="no-js"
+config.cache.73 = tx_bootstrappackage_accordion_item:73

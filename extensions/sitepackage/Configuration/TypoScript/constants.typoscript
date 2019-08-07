@@ -1,7 +1,7 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:gsfavicon/Configuration/TypoScript/constants.typoscript">
 
 
 ############
@@ -9,32 +9,60 @@
 ############
 page {
     logo {
-        file = EXT:paradeis2017/Resources/Public/Images/logo.svg
-        fileInverted = EXT:paradeis2017/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
-        alt = Paradeis2017
-        linktitle = Paradeis2017
-    }
-    favicon {
-        file = EXT:paradeis2017/Resources/Public/Icons/favicon.ico
+        file = EXT:sitepackage/Resources/Public/Images/logo.svg
+        fileInverted = EXT:sitepackage/Resources/Public/Images/logo-inverted.svg
+        height = 65
+        width = 155
+        alt = Paradeis Logo
+        linktitle = Home
     }
     fluidtemplate {
-        layoutRootPath = EXT:paradeis2017/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:paradeis2017/Resources/Private/Partials/Page/
-        templateRootPath = EXT:paradeis2017/Resources/Private/Templates/Page/
+        layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:sitepackage/Resources/Private/Partials/Page/
+        templateRootPath = EXT:sitepackage/Resources/Private/Templates/Page/
+    }
+    preloader {
+        enable = 0
+        logo.file = EXT:sitepackage/Resources/Public/Images/logo-inverted.svg
+        logo.height = 75
+    }
+    theme {
+        navigation {
+            style = default
+            type = top
+        }
+        cookieconsent {
+            content.href = 69
+        }
+        copyright.text = Copyright © 1999-2019 Enothek Halde 9 AG
+        googleFont.font = Ubuntu
+        language {
+            enable = 0
+            languageValue = 0
+        }
+        meta.navigationValue = 68,69,70,74
     }
 }
 
+[treeLevel = 0]
+page {
+    theme {
+        navigation {
+            style = default-transition
+            type = top
+        }
+    }
+}
+[end]
 
 ##################
 ### EXTENSIONS ###
 ##################
 plugin.bootstrap_package {
     view {
-        layoutRootPath = EXT:paradeis2017/Resources/Private/Layouts/
-        partialRootPath = EXT:paradeis2017/Resources/Private/Partials/
-        templateRootPath = EXT:paradeis2017/Resources/Private/Templates/
+        layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/
+        partialRootPath = EXT:sitepackage/Resources/Private/Partials/
+        templateRootPath = EXT:sitepackage/Resources/Private/Templates/
     }
 }
 
@@ -44,15 +72,60 @@ plugin.bootstrap_package {
 ########################
 plugin.bootstrap_package_contentelements {
     view {
-        layoutRootPath = EXT:paradeis2017/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:paradeis2017/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:paradeis2017/Resources/Private/Templates/ContentElements/
+        layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:sitepackage/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:sitepackage/Resources/Private/Templates/ContentElements/
     }
 }
 
 
-#######################################
-### REMOVE BOOTSTRAP LESS CONSTANTS ###
-#######################################
-plugin.bootstrap_package.settings.less >
-plugin.bootstrap_package.settings.overrideLessVariables >
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #76263C
+    secondary = #013859
+    footer-sections = (content:(background: $body-bg, color: $body-color, link-color: $primary), meta:(background: #f6f6f6, color: #313131, link-color: $primary))
+}
+
+plugin.bootstrap_package_contentelements.menu_thumbnail.media.height = 170m
+plugin.bootstrap_package_contentelements.menu_thumbnail.media.width = 170
+
+
+###########################
+### GSFAVICON CONSTANTS ###
+###########################
+plugin.gsfavicon.path = EXT:sitepackage/Resources/Public/Icons/Favicon/
+plugin.gsfavicon.msapplication-TileColor = #FFFFFF
+plugin.gsfavicon.theme-color = #FFFFFF
+
+
+##########################
+### META SEO CONSTANTS ###
+##########################
+plugin.metaseo.metaTags.linkGeneration = 1
+plugin.metaseo.metaTags.description = Genuss hat einen Namen - PARADEIS Weine - Delikatessen - Bistro in Baden, da wo es am sch�nsten ist!
+plugin.metaseo.metaTags.keywords = Wein,Weinhandel,Delikatessen,Spirituosen,Teigwaren,Gem�se,Fr�chte,Brot,Delikatesen,Milchprodukte,Geschenke,Geschenkidee,Fr�chtek�rbe,Fr�chtekorb,Geschenkkorb,Schnaps,Bistro,K�se
+plugin.metaseo.metaTags.copyright = 2018 Enothek Halde 9 AG. All rights reserved.
+plugin.metaseo.metaTags.email = webmaster@paradeis.ch
+plugin.metaseo.metaTags.author = Simon Gilli
+plugin.metaseo.metaTags.rating = General
+plugin.metaseo.metaTags.revisit = 1
+plugin.metaseo.metaTags.geoPositionLatitude = 47.472341
+plugin.metaseo.metaTags.geoPositionLongitude = 8.3069058
+plugin.metaseo.metaTags.geoRegion = CH-AG
+plugin.metaseo.metaTags.geoPlacename = Baden
+plugin.metaseo.metaTags.googleVerification = HE25NWeHjXfANYQV5qoHPCAoy4EUOXfEK9diZQf4HSU
+plugin.metaseo.services.googleAnalytics.anonymizeIp = 1
+
+
+########################
+### GOMAPS CONSTANTS ###
+########################
+plugin.tx_gomapsext.settings.apiKey = AIzaSyCjUxOTDGAlc0Elgt2BnJilW-K_6yvm-Rc
+
+
+########################
+### CONFIG CONSTANTS ###
+########################
+config.sendCacheHeaders = 0
