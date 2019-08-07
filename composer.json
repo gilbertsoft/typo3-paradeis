@@ -1,0 +1,49 @@
+{
+  "name": "gilbertsoft/paradeis",
+  "description": "Website for paradeis.ch",
+  "homepage": "https://gilbertsoft.com",
+  "license": ["GPL-3.0-or-later"],
+  "keywords": ["TYPO3 CMS"],
+  "authors": [
+    {
+      "name": "Simon Gilli",
+      "email": "we@gilbertsoft.com"
+    }
+  ],
+  "support": {
+    "email": "support@gilbertsoft.com",
+    "issues": "https://github.com/gilbertsoft/typo3-paradeis/issues"
+  },
+  "repositories": [
+    { "type": "path", "url": "extensions/*" },
+    { "type": "composer", "url": "https://composer.typo3.org/" }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "typo3/minimal": "^8.7",
+    "gilbertsoft/sitepackage": "@dev",
+    "gilbertsoft/gswarranty": "*",
+    "gilbertsoft/gscacheconfig": "*",
+    "gilbertsoft/gsprotectedconfig": "*",
+    "gilbertsoft/gsfavicon": "*",
+    "helhum/typo3-console": "^5.6",
+    "helhum/typo3-secure-web": "^0.2.8"
+  },
+  "require-dev": {
+    "ichhabrecht/filefill": "^2.0"
+  },
+  "config": {
+    "platform": {
+      "php": "7.2.21"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "root-dir": "private",
+      "web-dir": "web",
+      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+    },
+    "enable-patching": true
+  }
+}
